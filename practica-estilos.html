@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <!-- CSS: Hojas de estilos en cascada -->
+  <!-- selector {} -->
+  <!-- ¿Qué es un selector? = a quien le afecta los atributos estilos -->
+  <!-- etiqueta {}, .unaclase {}, #identificador {}, * {} -->
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      border: 0;
+    }
+
+    /* Solo se puede utilizar una vez */
+    #titulo{
+      color: blue;
+      text-align: center;
+      text-transform: uppercase; /* Mayúsculas */
+      font-weight: bold; /* Negrita */
+    }
+
+    /* Le afecta a todas las etiquetas <p> */
+    p {
+      color: red; 
+      text-align: center; 
+      font-style: italic;
+      margin-top: 2em; /* 1em = 16px = 1M */
+      margin-bottom: 4em;
+    }
+
+    /* Clase que puede heredarse muchas veces */
+    .importante{
+      background-color: bisque;
+      border: 3px dashed rgb(14, 14, 225); /* dotted, solid, double, dashed */
+      padding: 1em; /* Espacio interno */
+    }
+
+    .caja{
+      background-color: aquamarine;
+      display: inline-block;
+      height: 60px;
+      padding-top: 40px;
+      text-align: center;
+      width: 100px;
+    }
+
+    .fondoimg{
+      background-image: url('./images/goku_normal.webp');
+      background-size:auto;
+      background-position: bottom;
+    }
+  </style>
+  
+  <h1 id="titulo">Fundamentos CSS</h1>
+
+  <!-- atributo: valor; atributo: valor; -->
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus ex quisquam in placeat itaque minima quibusdam ad obcaecati eligendi mollitia? Minus illum iusto inventore assumenda repellat perferendis tenetur ad ipsa! Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste vero, excepturi, nobis voluptatum recusandae adipisci qui sit error dolor esse doloremque doloribus magnam quos enim voluptates odio nihil quaerat eligendi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem recusandae optio, ut asperiores natus exercitationem consectetur mollitia repellendus enim quae nobis labore quos eaque magnam iste deleniti itaque, porro in?
+  </p>
+
+  <p>
+     Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus ex quisquam in placeat itaque minima quibusdam ad obcaecati eligendi mollitia? Minus illum iusto inventore assumenda repellat perferendis tenetur ad ipsa! Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste vero, excepturi, nobis voluptatum recusandae adipisci qui sit error dolor esse doloremque doloribus magnam quos enim voluptates odio nihil quaerat eligendi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem recusandae optio, ut asperiores natus exercitationem consectetur mollitia repellendus enim quae nobis labore quos eaque magnam iste deleniti itaque, porro in?
+  </p>
+
+  <p class="importante fondoimg">
+     Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus ex quisquam in placeat itaque minima quibusdam ad obcaecati eligendi mollitia? Minus illum iusto inventore assumenda repellat perferendis tenetur ad ipsa! Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste vero, excepturi, nobis voluptatum recusandae adipisci qui sit error dolor esse doloremque doloribus magnam quos enim voluptates odio nihil quaerat eligendi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem recusandae optio, ut asperiores natus exercitationem consectetur mollitia repellendus enim quae nobis labore quos eaque magnam iste deleniti itaque, porro in?
+  </p>
+
+  <hr> <!-- Línea horizontal -->
+  <br> <!-- Salto de línea -->
+
+  <div class="caja">
+    Caja 1
+  </div>
+  <div class="caja">
+    Caja 2
+  </div>
+
+
+</body>
+</html>

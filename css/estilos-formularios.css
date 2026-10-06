@@ -1,0 +1,156 @@
+/* =================================================================
+   ESTILOS MODERNOS PARA FORMULARIOS - FLAT & ELEGANT
+   ================================================================= */
+
+/* Contenedor principal del formulario */
+.flat-form {
+  max-width: 600px;
+  width: 100%;
+  margin: 30px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Grupo de campos (Label + Input/Select) */
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Etiquetas */
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #4a5568;
+  margin-bottom: 8px;
+  transition: color 0.2s ease;
+}
+
+/* Estilos base para Inputs tipo text y Selects */
+.flat-input,
+.flat-select {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 15px;
+  color: #2d3748;
+  background-color: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Efecto Hover general en los controles */
+.flat-input:hover,
+.flat-select:hover {
+  background-color: #edf2f7;
+  border-color: #cbd5e0;
+}
+
+/* Control Activo (Foco estándar por tabulación o clic) */
+.flat-input:focus,
+.flat-select:focus {
+  background-color: #ffffff;
+  border-color: #3182ce;
+  box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.15);
+}
+
+/* ÉNFASIS: Identificación visual avanzada del control activo / Enter */
+/* Cambia la etiqueta del campo activo para guiar al usuario visualmente */
+.flat-input:focus + label, /* Si usas etiquetas flotantes (opcional) */
+.form-group:focus-within label {
+  color: #3182ce;
+}
+
+/* Clase de utilidad para resaltar el control cuando se presiona Enter (vía JS) */
+.flat-input.active-enter,
+.flat-select.active-enter {
+  border-color: #38a169 !important; /* Verde elegante de éxito */
+  background-color: #f0fff4 !important;
+  box-shadow: 0 0 0 3px rgba(56, 161, 105, 0.20) !important;
+}
+
+/* Estilo específico para el select (flecha personalizada) */
+.flat-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234a5568' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 16px;
+  padding-right: 40px;
+  cursor: pointer;
+}
+
+/* Botones */
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.flat-btn {
+  flex: 1;
+  padding: 12px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+/* Botón Primario */
+.flat-btn-primary {
+  background-color: #3182ce;
+  color: #ffffff;
+}
+
+.flat-btn-primary:hover {
+  background-color: #2b6cb0;
+  box-shadow: 0 4px 12px rgba(49, 130, 206, 0.25);
+}
+
+.flat-btn-primary:active {
+  transform: translateY(1px);
+}
+
+/* Botón Secundario / Reset */
+.flat-btn-secondary {
+  background-color: #edf2f7;
+  color: #4a5568;
+}
+
+.flat-btn-secondary:hover {
+  background-color: #e2e8f0;
+  color: #2d3748;
+}
+
+/* =================================================================
+   DISEÑO RESPONSIVO (Media Queries)
+   ================================================================= */
+@media (max-width: 480px) {
+  .flat-form {
+    padding: 20px;
+    margin: 10px;
+    box-shadow: none;
+    background-color: transparent; /* Se integra al fondo móvil si se prefiere */
+  }
+
+  .form-actions {
+    flex-direction: column; /* Apila los botones en pantallas pequeñas */
+  }
+
+  .flat-btn {
+    width: 100%;
+  }
+}
